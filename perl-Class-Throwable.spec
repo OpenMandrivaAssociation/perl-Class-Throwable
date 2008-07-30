@@ -1,7 +1,7 @@
 %define realname Class-Throwable
 %define name	perl-%{realname}
 %define version	0.10
-%define release	%mkrel 2
+%define release	%mkrel 4
 
 Summary:	A minimal lightweight exception class
 Name:		%{name}
