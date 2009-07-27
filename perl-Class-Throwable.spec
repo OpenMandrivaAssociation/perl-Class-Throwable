@@ -1,17 +1,17 @@
-%define realname Class-Throwable
-%define name	perl-%{realname}
-%define version	0.10
-%define release	%mkrel 4
+%define upstream_name    Class-Throwable
+%define upstream_version 0.11
+
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	%mkrel 1
 
 Summary:	A minimal lightweight exception class
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
 License:	Artistic/GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{realname}/
-Source:		%{realname}-%{version}.tar.bz2
-Buildroot:	%{_tmppath}/%{name}-root
+URL:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:    http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
+
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 BuildArch:	noarch
 
 %description
@@ -22,7 +22,7 @@ solutions like Exception::Class which can be used to define complex inline
 exceptions and has a number of module dependencies.
 
 %prep
-%setup -q -n %{realname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
