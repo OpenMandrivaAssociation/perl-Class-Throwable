@@ -1,15 +1,15 @@
 %define upstream_name    Class-Throwable
-%define upstream_version 0.11
+%define upstream_version 0.13
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	A minimal lightweight exception class
 License:	Artistic/GPL
 Group:		Development/Perl
-URL:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
+URL:		https://github.com/kmx/perl-Class-Throwable
+Source0:	https://cpan.metacpan.org/authors/id/K/KM/KMX/Class-Throwable-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
