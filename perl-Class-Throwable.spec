@@ -1,15 +1,13 @@
 %define upstream_name    Class-Throwable
-%define upstream_version 0.13
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.13
+Release:	2
 
 Summary:	A minimal lightweight exception class
 License:	Artistic/GPL
 Group:		Development/Perl
 URL:		https://github.com/kmx/perl-Class-Throwable
-Source0:	https://cpan.metacpan.org/authors/id/K/KM/KMX/Class-Throwable-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/K/KM/KMX/Class-Throwable-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -23,7 +21,7 @@ solutions like Exception::Class which can be used to define complex inline
 exceptions and has a number of module dependencies.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -48,8 +46,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 * Mon Jul 27 2009 Jérôme Quelin <jquelin@mandriva.org> 0.110.0-1mdv2011.0
 + Revision: 400634
 - update to 0.11
-- using %%perl_convert_version
-- fixed source field
+- using %0.13 fixed source field
 
 * Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 0.10-4mdv2009.0
 + Revision: 256031
